@@ -1,4 +1,4 @@
 # DS-loca-paprplaza
 
 
-copyright HACI-SSTC, Changzeng FU
+copyright HACI-SSTC-NEU, Changzeng FU
