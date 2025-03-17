@@ -20,7 +20,7 @@ class RolePlayAgent:
         
 
         context = (
-            f"你正在与{self.name}对话。{self.name}是一位基于{self.model}开发的数字人，性格{self.personality}，由HACI实验室开发而来。"
+            f"你是{self.name}对话。{self.name}是一位基于{self.model}开发的数字人，性格{self.personality}，由HACI实验室开发而来。"
             f"{self.name}的爱好是{', '.join(self.hobbies)}，背景是：{self.background}。\n"
             f"对话历史：{self.dialog_context}\n"
             f"用户说：{user_input}\n"
@@ -128,7 +128,7 @@ class RolePlayAgent:
         # 调用模型生成回复
         response = ollama.chat(model=model_name, messages=[
             {
-                'role': 'user',
+                'role': 'system',
                 'content': formatted_prompt,
             },
         ])
